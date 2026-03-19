@@ -1,0 +1,57 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.first {
+  color: rebeccapurple;
+}
+
+#your-name {
+  background-color: antiquewhite;
+  border: 2px solid;
+  width: 450px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#your-name h2 {
+  color: brown;
+}
+
+#profile-image {
+  width: 500px;
+  height: 500px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: greenyellow;
+}
