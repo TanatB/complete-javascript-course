@@ -14,16 +14,28 @@ const btnHold = document.querySelector('.btn--hold');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
 
-// Starting conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add('hidden');
-let playing = true;
+let scores, currentScore, activePlayer, playing;
 
-// Dynamic variables
-let currentScore = 0;
-let activePlayer = 0;
-const scores = [Number(score0El.textContent), Number(score1El.textContent)];
+// Starting Conditions
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+
+  diceEl.classList.add('hidden');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  document.querySelector(`.player--1`).classList.remove('player--active');
+  document.querySelector(`.player--0`).classList.add('player--active');
+};
+
+init();
 
 const switchPlayer = function () {
   // Set active player current score to 0
@@ -83,3 +95,6 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
+
+// 90. Reset the game button
+btnNew.addEventListener('click', init);
